@@ -12,18 +12,19 @@ sources:
   type: clone
   branch: master
   cache_path: ''
-  cache_timestamp: '2025-11-22 17:11:13'
+  cache_timestamp: '2025-11-29 17:51:47'
   filters:
   - crud
 expanded:
 - poo@campanha-principal
 - poo@bloco_d-crud-com-mapas-e-enumerações
-tasks: {}
+tasks:
+  poo@agenda: '{alone:10, study:420}'
 flags:
   quests: 0
   tracks: 0
   tasks: 0
-  graph: 0
+  graph: 1
   xray: 0
 lang: py
-selected: poo@tarifas
+selected: poo@agenda
