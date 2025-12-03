@@ -37,8 +37,18 @@
         },
         {
             "label": "2025-11-29_23-41-58",
-            "content": "",
+            "content": "@@ -1,444 +0,0 @@\n-class Fone:%0A    def __init__(self, id, number):%0A        self._id = id%0A        self._number = number%0A%0A    def isValid(self):%0A        valid_chars = %220123456789%22%0A        for c in self._number:%0A            if c not in valid_chars:%0A                return False%0A        return True%0A%0A    def getId(self):%0A        return self._id%0A%0A    def getNumber(self):%0A        return self._number%0A%0A    def __str__(self):%0A        return f%22%7Bself._id%7D:%7Bself._number%7D%22%0A\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-12-02_21-02-12",
+            "content": "@@ -441,642 +441,4 @@\n r%7D%22%0A\n-%0A%0Aclass Contact:%0A    def __init__(self, name):%0A        self._name = name%0A        self._fones = %5B%5D%0A        self._favorited = False%0A%0A    def addFone(self, id, number):%0A        f = Fone(id, number)%0A        if f.isValid():%0A            self._fones.append(f)%0A        else:%0A            print(%22fail: invalid number%22)%0A%0A    def rmFone(self, index):%0A        if index %3C 0 or index %3E= len(self._fones):%0A            print(%22fail: invalid index%22)%0A        else:%0A            new_fones = %5B%5D%0A            for i in range(len(self._fones)):%0A                if i != index:%0A                    new_fones.append(self._fones%5Bi%5D)%0A            self._fones = new_fones%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-12-02_22-50-06",
+            "content": "class Fone:\n    def __init__(self, id, number):\n        self._id = id\n        self._number = number\n\n    def isValid(self):\n        valid_chars = \"0123456789\"\n        for c in self._number:\n            if c not in valid_chars:\n                return False\n        return True\n\n    def getId(self):\n        return self._id\n\n    def getNumber(self):\n        return self._number\n\n    def __str__(self):\n        return f\"{self._id}:{self._number}\"\n\n\nclass Contact:\n    def __init__(self, name):\n        self._name = name\n        self._fones = []\n        self._favorited = False\n\n    def addFone(self, id, number):\n        f = Fone(id, number)\n        if f.isValid():\n            self._fones.append(f)\n        else:\n            print(\"fail: invalid number\")\n\n    def rmFone(self, index):\n        if index < 0 or index >= len(self._fones):\n            print(\"fail: invalid index\")\n        else:\n            new_fones = []\n            for i in range(len(self._fones)):\n                if i != index:\n                    new_fones.append(self._fones[i])\n            self._fones = new_fones\n",
+            "lines": "44"
         }
     ]
 }

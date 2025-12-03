@@ -1,0 +1,35 @@
+2025-12-02 19:03:19, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 19:03:22, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 19:03:22, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 19:03:28, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 19:03:30, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 19:03:31, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 19:03:58, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 19:03:58, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 19:04:04, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 19:04:05, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 19:04:06, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 19:04:10, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 19:09:54, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 19:09:55, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 19:09:59, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 19:31:18, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 19:31:18, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 19:31:20, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 20:26:07, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 20:26:07, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 20:26:09, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 21:01:45, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 21:01:45, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 21:01:48, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 21:02:12, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 21:02:13, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:20
+2025-12-02 21:02:16, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 21:48:21, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 21:48:21, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0
+2025-12-02 21:48:24, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 22:50:06, MOVE, v:1, k:poo@agenda, mode:PICK
+2025-12-02 22:50:06, EXEC, v:1, k:poo@agenda, mode:FULL, rate:0, size:44
+2025-12-02 22:50:09, MOVE, v:1, k:poo@agenda, mode:BACK
+2025-12-02 22:50:54, SELF, v:1, k:poo@agenda, alone:10, study:600
+2025-12-02 22:51:00, SELF, v:1, k:poo@agenda, alone:10, study:600
