@@ -60,6 +60,9 @@ def main():
             rm = int(args[1])
             ctt.rmFone(rm)
 
+        elif args[0] == "tfav":
+            ctt.toogleFavorites()
+
         else:
             print("fail: comando invalido!")
 main()

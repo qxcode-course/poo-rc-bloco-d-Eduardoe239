@@ -19,7 +19,7 @@ expanded:
 - poo@campanha-principal
 - poo@bloco_d-crud-com-mapas-e-enumerações
 tasks:
-  poo@contato: '{rate:40}'
+  poo@contato: '{rate:80}'
   poo@agenda: '{rate:100, alone:10, study:960}'
 flags:
   quests: 0
