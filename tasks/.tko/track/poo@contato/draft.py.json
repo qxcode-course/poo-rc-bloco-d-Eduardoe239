@@ -2,8 +2,28 @@
     "patches": [
         {
             "label": "2025-11-22_17-12-03",
-            "content": "",
+            "content": "@@ -1,114 +0,0 @@\n-class Fone:%0A    def __init__(self, id: str , number: str):%0A        self.__id = id %0A        self.__number = number%0A\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-12-03_22-56-13",
+            "content": "@@ -111,181 +111,4 @@\n ber%0A\n-%0A    def getId(self):%0A        return self.__id %0A    def getNumber(self):%0A        return self.__number%0A%0A    def __str__(self):%0A        return f%22%7Bself.__id%7D:%7Bself.__number%7D%22%0A    %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-12-03_23-22-52",
+            "content": "@@ -288,341 +288,4 @@\n    %0A\n-    def isValid(self) -%3E bool:%0A        p = %220123456789().%22%0A        return all((c in p for c in self.__number))%0A%0A    def __str__(self):%0A        return f%22%7Bself.__id%7D:%7Bself.__number%7D%22%0A%0A%0Aclass Contat:%0A    def __init__(self, name: str):%0A        self.__name = name%0A        self.__fones: list%5BFone%5D = %5B%5D%0A        self.__favorited: bool = False%0A%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2025-12-03_23-46-18",
+            "content": "@@ -27,32 +27,33 @@\n __(self, id: str\n+ \n , number: str):%0A\n@@ -74,16 +74,17 @@\n _id = id\n+ \n %0A       \n@@ -116,22 +116,20 @@\n     def \n-isVali\n+getI\n d(self):\n@@ -141,69 +141,64 @@\n     \n-valid = %220123456789().%22%0A        return all(c in valid for c i\n+return self.__id %0A    def getNumber(self):%0A        retur\n n se\n@@ -208,17 +208,16 @@\n __number\n-)\n %0A%0A    de\n@@ -283,530 +283,346 @@\n r%7D%22%0A\n-%0A%0Aclass Contat:%0A    def __init__(self, name: str):%0A        self.__name = name%0A        self.__fones: list%5BFone%5D = %5B%5D%0A        self.__favorited = False%0A%0A    def addFone(self, id: str, number: str):%0A        f = Fone(id, number)%0A        if not f.isValid():%0A            print(%22fail: invalid number%22)%0A            return%0A        self.__fones.append(f)%0A%0A    def rmFone(self, index: int):%0A        if index %3C 0 or index %3E= len(self.__fones):%0A            print(%22fail: indice invalido%22)%0A            return%0A        self.__fones.pop(index)\n+    %0A    def isValid(self) -%3E bool:%0A        p = %220123456789().%22%0A        return all((c in p for c in self.__number))%0A%0A    def __str__(self):%0A        return f%22%7Bself.__id%7D:%7Bself.__number%7D%22%0A%0A%0Aclass Contat:%0A    def __init__(self, name: str):%0A        self.__name = name%0A        self.__fones: list%5BFone%5D = %5B%5D%0A        self.__favorited: bool = False\n %0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-12-04_00-04-57",
+            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.__id = id\n        self.__number = number\n\n    def isValid(self):\n        valid = \"0123456789().\"\n        return all(c in valid for c in self.__number)\n\n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n\n\nclass Contat:\n    def __init__(self, name: str):\n        self.__name = name\n        self.__fones: list[Fone] = []\n        self.__favorited = False\n\n    def addFone(self, id: str, number: str):\n        f = Fone(id, number)\n        if not f.isValid():\n            print(\"fail: invalid number\")\n            return\n        self.__fones.append(f)\n\n    def rmFone(self, index: int):\n        if index < 0 or index >= len(self.__fones):\n            print(\"fail: indice invalido\")\n            return\n        self.__fones.pop(index)\n\n",
+            "lines": "32"
         }
     ]
 }
