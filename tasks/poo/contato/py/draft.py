@@ -30,6 +30,34 @@ class Contat:
             return
         self.__fones.pop(index)
 
+    def toogleFavorites(self):
+        self.__favorited = not self.__favorited
+    
+    def __str__(self):
+        favorited = "@" if self.__favorited else "-"
+        list_fones = ", ".join(str(x) for x in self.__fones)
+        return f"{favorited} {self.__name} [{list_fones}]"
 
+def main():
+    ctt = None
 
+    while True:
+        line = input()
+        print("$" + line)
+        args: list[str] = line.split(" ")
+
+        if args[0] == "end":
+            break
+        elif args[0] == "show":
+            print(ctt)
+        elif args[0] == "init":
+            ctt = Contat(args[1])
+        elif args[0] == "add":
+            id = args[1]
+            number = args[2]
+            ctt.addFone(id, number)
+
+        else:
+            print("fail: comando invalido!")
+main()
 

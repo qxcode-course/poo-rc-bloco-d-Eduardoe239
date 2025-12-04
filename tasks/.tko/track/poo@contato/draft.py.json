@@ -22,8 +22,53 @@
         },
         {
             "label": "2025-12-04_00-04-57",
-            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.__id = id\n        self.__number = number\n\n    def isValid(self):\n        valid = \"0123456789().\"\n        return all(c in valid for c in self.__number)\n\n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n\n\nclass Contat:\n    def __init__(self, name: str):\n        self.__name = name\n        self.__fones: list[Fone] = []\n        self.__favorited = False\n\n    def addFone(self, id: str, number: str):\n        f = Fone(id, number)\n        if not f.isValid():\n            print(\"fail: invalid number\")\n            return\n        self.__fones.append(f)\n\n    def rmFone(self, index: int):\n        if index < 0 or index >= len(self.__fones):\n            print(\"fail: indice invalido\")\n            return\n        self.__fones.pop(index)\n\n",
+            "content": "@@ -811,11 +811,8 @@\n index)%0A%0A\n-%0A%0A%0A\n",
             "lines": "32"
+        },
+        {
+            "label": "2025-12-04_00-10-38",
+            "content": "@@ -815,14 +815,7 @@\n x)%0A%0A\n-msmvvv%0A\n %0A%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-12-04_00-10-52",
+            "content": "@@ -815,284 +815,14 @@\n x)%0A%0A\n-    def toogleFavorites(self):%0A        self.__favorited = not self.__favorited%0A    %0A    def __str__(self):%0A        favorited = %22@%22 if self.__favorited else %22-%22%0A        list_fones = %22, %22.join(str(x) for x in self.__fones)%0A        return f%22%7Bfavorited%7D %7Bself.__name%7D %7Blist_fones%7D%22\n+msmvvv%0A\n %0A%0A%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-12-04_00-16-31",
+            "content": "@@ -1094,314 +1094,5 @@\n %7D%22%0A%0A\n-def main()%0A    ctt = None%0A%0A    while True:%0A        line = input()%0A        print(%22$%22 + line)%0A        args: list%5Bstr%5D = line.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(ctt)%0A            %0A        else:%0A            print(%22fail: comando invalido!%22)%0A\n %0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-12-04_00-19-25",
+            "content": "@@ -1327,16 +1327,28 @@\n nt(ctt)%0A\n+            \n %0A       \n@@ -1402,13 +1402,6 @@\n o!%22)\n-%0Amain()\n %0A%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-12-04_00-19-34",
+            "content": "@@ -1100,17 +1100,16 @@\n f main()\n-:\n %0A    ctt\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-04_00-19-45",
+            "content": "@@ -1331,74 +1331,8 @@\n ctt)\n-%0A        elif args%5B0%5D == %22init%22:%0A            ctt = Contat(args%5B1%5D)\n %0A%0A  \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-04_00-21-38",
+            "content": "@@ -1075,17 +1075,16 @@\n __name%7D \n-%5B\n %7Blist_fo\n@@ -1087,17 +1087,16 @@\n t_fones%7D\n-%5D\n %22%0A%0Adef m\n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-12-04_00-22-11",
+            "content": "@@ -1399,129 +1399,8 @@\n %5B1%5D)\n-%0A        elif args%5B0%5D == %22add%22:%0A            id = args%5B1%5D%0A            number = args%5B2%5D%0A            ctt.addFone(id, number)\n %0A%0A  \n",
+            "lines": "59"
+        },
+        {
+            "label": "2025-12-04_00-24-20",
+            "content": "class Fone:\n    def __init__(self, id: str, number: str):\n        self.__id = id\n        self.__number = number\n\n    def isValid(self):\n        valid = \"0123456789().\"\n        return all(c in valid for c in self.__number)\n\n    def __str__(self):\n        return f\"{self.__id}:{self.__number}\"\n\n\nclass Contat:\n    def __init__(self, name: str):\n        self.__name = name\n        self.__fones: list[Fone] = []\n        self.__favorited = False\n\n    def addFone(self, id: str, number: str):\n        f = Fone(id, number)\n        if not f.isValid():\n            print(\"fail: invalid number\")\n            return\n        self.__fones.append(f)\n\n    def rmFone(self, index: int):\n        if index < 0 or index >= len(self.__fones):\n            print(\"fail: indice invalido\")\n            return\n        self.__fones.pop(index)\n\n    def toogleFavorites(self):\n        self.__favorited = not self.__favorited\n    \n    def __str__(self):\n        favorited = \"@\" if self.__favorited else \"-\"\n        list_fones = \", \".join(str(x) for x in self.__fones)\n        return f\"{favorited} {self.__name} [{list_fones}]\"\n\ndef main():\n    ctt = None\n\n    while True:\n        line = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(ctt)\n        elif args[0] == \"init\":\n            ctt = Contat(args[1])\n        elif args[0] == \"add\":\n            id = args[1]\n            number = args[2]\n            ctt.addFone(id, number)\n\n        else:\n            print(\"fail: comando invalido!\")\nmain()\n\n",
+            "lines": "63"
         }
     ]
 }
