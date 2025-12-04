@@ -56,6 +56,9 @@ def main():
             id = args[1]
             number = args[2]
             ctt.addFone(id, number)
+        elif args[0] == "rm":
+            rm = int(args[1])
+            ctt.rmFone(rm)
 
         else:
             print("fail: comando invalido!")
